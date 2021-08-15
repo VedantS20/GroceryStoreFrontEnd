@@ -39,6 +39,7 @@
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
 - [Bootstrap](https://getbootstrap.com)
+- [Braintree](https://www.braintreepayments.com/)
 
 <!-- USAGE EXAMPLES -->
 
