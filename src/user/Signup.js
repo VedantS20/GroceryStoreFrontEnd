@@ -14,10 +14,9 @@ const Signup = () => {
 
   const { name, email, password, error, success } = values;
 
-  const handleChange = (name) =>
-    (event) => {
-      setValues({ ...values, error: false, [name]: event.target.value });
-    };
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, error: false, [name]: event.target.value });
+  };
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -53,11 +52,8 @@ const Signup = () => {
             className="alert alert-success"
             style={{ display: success ? "" : "none" }}
           >
-            New account created successfully. Please <Link
-              to="/signin"
-            >
-              login now.
-            </Link>
+            New account created successfully. Please{" "}
+            <Link to="/signin">login now.</Link>
           </div>
         </div>
       </div>
@@ -111,10 +107,7 @@ const Signup = () => {
                 type="password"
               />
             </div>
-            <button
-              onClick={onSubmit}
-              className="btn btn-success btn-block"
-            >
+            <button onClick={onSubmit} className="btn btn-success btn-block">
               Submit
             </button>
           </form>
@@ -124,13 +117,11 @@ const Signup = () => {
   };
 
   return (
-    <Base title="Sign Up Page" description="A signup for LCO user">
+    <Base title="Sign Up Page" description="A signup for to continue shopping">
       {successMessage()}
       {errorMessage()}
       {signUpForm()}
-      <p className="text-white text-center">
-        {JSON.stringify(values)}
-      </p>
+      {/* <p className="text-white text-center">{JSON.stringify(values)}</p> */}
     </Base>
   );
 };

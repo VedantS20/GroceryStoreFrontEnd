@@ -7,8 +7,8 @@ import { signin, authenticate, isAuthenticated } from "../auth/helper";
 const Signin = () => {
   const [values, setValues] = useState({
     name: "",
-    email: "ten@hitesh.com",
-    password: "12345",
+    email: "one@gmail.com",
+    password: "1234",
     error: "",
     success: false,
     loading: false,
@@ -17,10 +17,9 @@ const Signin = () => {
   const { name, email, password, error, success, loading, didRedirect } =
     values;
 
-  const handleChange = (name) =>
-    (event) => {
-      setValues({ ...values, error: false, [name]: event.target.value });
-    };
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, error: false, [name]: event.target.value });
+  };
 
   const onSumit = (event) => {
     event.preventDefault();
@@ -72,11 +71,8 @@ const Signin = () => {
             className="alert alert-success"
             style={{ display: success ? "" : "none" }}
           >
-            New account created successfully. Please <Link
-              to="/signin"
-            >
-              login now.
-            </Link>
+            New account created successfully. Please{" "}
+            <Link to="/signin">login now.</Link>
           </div>
         </div>
       </div>
@@ -123,10 +119,7 @@ const Signin = () => {
                 type="password"
               />
             </div>
-            <button
-              onClick={onSumit}
-              className="btn btn-success btn-block"
-            >
+            <button onClick={onSumit} className="btn btn-success btn-block">
               Submit
             </button>
           </form>
@@ -136,13 +129,11 @@ const Signin = () => {
   };
 
   return (
-    <Base title="Welcome to sign in page" description="A tshirt store">
+    <Base title="Welcome to sign in page" description="A grocery store">
       {loadingMessage()}
 
       {signInForm()}
-      <p className="text-center">
-        {JSON.stringify(values)}
-      </p>
+      {/* <p className="text-center">{JSON.stringify(values)}</p> */}
       {performRedirect()}
     </Base>
   );
