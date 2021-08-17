@@ -3,7 +3,7 @@
 <p align="center">
   <h3 align="center">Online Grocery Store</h3>
   <p align="center">
-    <a href="#"><strong>Explore the Website »</strong></a>
+    <a href="http://13.235.248.72:8080/"><strong>Explore the Website »</strong></a>
   </p>
 </p>
 
